@@ -1,4 +1,5 @@
 package com.enviro.assesment.grad001.arnoldmasutha.model;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -21,9 +22,18 @@ public class RecyclingTip {
     @JoinColumn(name = "waste_category_id")
     private WasteCategory wasteCategory;
 
+    // Default constructor (required by JPA)
     public RecyclingTip() {
     }
 
+    // Constructor with title, description, and wasteCategory
+    public RecyclingTip(String title, String description, WasteCategory wasteCategory) {
+        this.title = title;
+        this.description = description;
+        this.wasteCategory = wasteCategory;
+    }
+
+    // Getters and setters
     public Long getId() {
         return id;
     }

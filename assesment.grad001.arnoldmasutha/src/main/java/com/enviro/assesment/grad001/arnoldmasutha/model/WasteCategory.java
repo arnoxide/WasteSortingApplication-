@@ -14,19 +14,20 @@ public class WasteCategory {
     @Size(max = 50)
     private String name;
 
-    public WasteCategory(Long id, String name, String description) {
-        this.id = id;
+    @Size(max = 255)
+    private String description;
+
+    // Default constructor (required by JPA)
+    public WasteCategory() {
+    }
+
+    // Constructor with name and description
+    public WasteCategory(String name, String description) {
         this.name = name;
         this.description = description;
     }
 
-    @Size(max = 255)
-    private String description;
-
-    public WasteCategory() {
-
-    }
-
+    // Getters and setters
     public Long getId() {
         return id;
     }

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//The @PathVariable annotation is used to extract the ID from the URL path for the GET, PUT, and DELETE methods.
 @RestController
 @RequestMapping("/api/waste-categories")
 public class WasteCategoryController {

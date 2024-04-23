@@ -22,9 +22,18 @@ public class DisposalGuideline {
     @JoinColumn(name = "waste_category_id")
     private WasteCategory wasteCategory;
 
+    // Default constructor (required by JPA)
     public DisposalGuideline() {
     }
 
+    // Constructor with title, description, and wasteCategory
+    public DisposalGuideline(String title, String description, WasteCategory wasteCategory) {
+        this.title = title;
+        this.description = description;
+        this.wasteCategory = wasteCategory;
+    }
+
+    // Getters and setters
     public Long getId() {
         return id;
     }
@@ -56,5 +65,4 @@ public class DisposalGuideline {
     public void setWasteCategory(WasteCategory wasteCategory) {
         this.wasteCategory = wasteCategory;
     }
-
 }
